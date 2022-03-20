@@ -197,3 +197,11 @@ list of your [TextField]. Provide a non-empty list of masks to work with,
 customize if needed.
 
 <img src="readme_media/idk_really.png" height="400"/>
+
+### Other features? Currency? Regex?
+
+No, there is no support for regex validation and currency formatting. The reason is the same as
+in the case of vue-the-mask: there are libs that do it better.
+
+This was originally designed as a pattern matcher to help with ever-present problems of pretty input formatting, 
+and I don't want to create a giant blob of this library.
