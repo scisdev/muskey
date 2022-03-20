@@ -150,6 +150,42 @@ but if you want updates on it, you need to create your own ways of doing that. F
 current formatter info value inside of onChanged callback in your TextField,
 add a listener on your TextEditingController or any other way.
 
+### For example:
+
+```dart
+...
+
+muskey = MuskeyFormatter.countryPhoneMasks(
+  allowOverflowingInputs: true,
+);
+
+...
+
+build(BuildContext context) {
+  ...
+  Row(
+    children: [
+      Expanded(
+        child: TextField(
+          inputFormatters: [muskey],
+          onChanged: (_) {
+            setState(() {});
+          },
+        ),
+      ),
+      const SizedBox(width: 30),
+      ElevatedButton(
+        child: const Text('NEXT'),
+        onPressed: muskey.info.isValid
+          ? () {/*your code*/}
+          : null,
+      ),
+    ],
+  ),
+  ...
+}
+```
+
 ### Usage:
 
 Create an instance of this class either inside your StatefulWidget, or
