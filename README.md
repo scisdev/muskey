@@ -5,6 +5,9 @@
 Muskey is a single-file light library inspired by [vue-the-mask](https://github.com/vuejs-tips/vue-the-mask) 
 that's shown its usefulness throughout my projects, so I decided to share it with the world.
 
+Muskey supports unlimited number of masks, smart cursor positioning (even when cutting or pasting values),
+and flexible customization. Clean input value and validity are available at any time.
+
 ---
 
 ## A quick rundown on what this is
