@@ -140,3 +140,19 @@ MuskeyFormatter(
 ```
 
 <img src="readme_gifs/showcase.gif" height="600"/>
+
+---
+
+## A small discussion on design
+
+This formatter is *stateless* by design, so if you want updates on validity,
+you need to create your own ways of doing that. For example, you can get
+current formatter info value inside of onChanged callback in your TextField,
+add a listener on your TextEditingController or any other way.
+
+### Usage:
+
+Create an instance of this class either inside your StatefulWidget, or
+directly in your [build] method, and place it in [inputFormatters]
+list of your [TextField]. Provide a non-empty list of masks to work with,
+customize if needed.
