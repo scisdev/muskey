@@ -2,11 +2,12 @@
 
 **_An actually useful pattern matcher and field input formatter library for Flutter._**
 
-Muskey is a single-file light library that's shown its usefulness throughout my projects, so I decided to share it with the world.
-It's inspired by [vue-the-mask](https://github.com/vuejs-tips/vue-the-mask)!
+Muskey is a single-file light library inspired by [vue-the-mask](https://github.com/vuejs-tips/vue-the-mask) 
+that's shown its usefulness throughout my projects, so I decided to share it with the world.
+
 ---
 
-### A quick rundown on what this is
+## A quick rundown on what this is
 
 Imagine you do a login/registration page and need a nice formatting for phone inputs.
 Well, **Muskey**'s got you covered:
@@ -26,7 +27,7 @@ TextField(
 
 And that's it! Smart cursor positioning and dynamic mask switch make the ux nice and usable:
 
-<img src="readme_gifs/world_masks.gif" height="300"/>
+<img src="readme_gifs/world_masks.gif" height="600"/>
 
 ---
 
@@ -137,7 +138,4 @@ MuskeyFormatter(
 );
 ```
 
-
-![](readme_gifs/showcase.gif)
-
----
+<img src="readme_gifs/showcase.gif" height="600"/>
