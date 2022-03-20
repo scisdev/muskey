@@ -174,6 +174,19 @@ class _PageOneState extends State<PageOne> {
     overflow: OverflowBehavior.forbidden(),
   );
 
+  final muskey2 = MuskeyFormatter(
+    masks: [
+      '*** ***',
+      '*******',
+    ],
+    wildcards: {
+      '*': RegExp('[0-9a-zA-Z]'),
+    },
+    charTransforms: {
+      '*': (s) => s.toUpperCase(),
+    },
+  );
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -247,6 +260,74 @@ class _PageOneState extends State<PageOne> {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Actual number validation is up to you',
+                  textAlign: TextAlign.justify,
+                ),
+              ),
+              const SizedBox(height: 30),
+              const Text(
+                'California vehicle registration plates',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 24,
+                ),
+              ),
+              const SizedBox(height: 30),
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text('''
+  MuskeyFormatter(
+    masks: [
+      '*** ***',
+      '*******',
+    ],
+    wildcards: {
+      '*': RegExp('[0-9a-zA-Z]'),
+    },
+    charTransforms: {
+      '*': (s) => s.toUpperCase(),
+    },
+  )
+                '''),
+              ),
+              const SizedBox(height: 30),
+              Row(
+                children: [
+                  Expanded(
+                    child: TextField(
+                      inputFormatters: [muskey2],
+                      onChanged: (_) {
+                        setState(() {});
+                      },
+                      keyboardType: TextInputType.visiblePassword,
+                      decoration: const InputDecoration(
+                        hintText: 'Your license plate number',
+                        hintStyle: TextStyle(
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 30),
+                  ElevatedButton(
+                    child: const Text('NEXT'),
+                    onPressed: muskey2.info.isValid
+                        ? () {
+                            FocusScope.of(context).unfocus();
+                            widget.controller.animateTo(
+                              1,
+                              duration: const Duration(milliseconds: 450),
+                            );
+                          }
+                        : null,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 45),
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Again, actual format validation (3 letters 4 digits) is up to you',
                   textAlign: TextAlign.justify,
                 ),
               ),
