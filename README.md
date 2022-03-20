@@ -145,8 +145,8 @@ MuskeyFormatter(
 
 ## A small discussion on design
 
-This formatter is *stateless* by design, so if you want updates on validity,
-you need to create your own ways of doing that. For example, you can get
+This formatter is *stateless* by design. It does support detecting the validity of your masks,
+but if you want updates on it, you need to create your own ways of doing that. For example, you can get
 current formatter info value inside of onChanged callback in your TextField,
 add a listener on your TextEditingController or any other way.
 
