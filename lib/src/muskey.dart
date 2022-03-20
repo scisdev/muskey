@@ -136,14 +136,12 @@ class MuskeyFormatter extends TextInputFormatter {
       // Removed a single character.
       // An extra check for input prettiness.
       // For instance, when pressing `delete` on web version
-      final mask = _charByCharSearch(newValue.text);
-      if (mask != null) {
-        final clean = _getClean(newValue.text);
-        _info = CurrentMaskInfo(
-          clean: clean,
-          isValid: clean.length >= _getClean(mask).length,
-        );
+      if (newNumDecs == newValue.text.length) {
+        // If only decorators are left, just accept the input for ux purposes.
+        _info = const CurrentMaskInfo(clean: '', isValid: false);
         return newValue;
+      } else {
+        return _default(oldValue, newValue);
       }
     }
 
