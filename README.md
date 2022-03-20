@@ -9,7 +9,8 @@ that's shown its usefulness throughout my projects, so I decided to share it wit
 
 ## A quick rundown on what this is
 
-Imagine you do a login/registration page and need a nice formatting for phone inputs.
+Imagine you're creating a login/registration page and need a nice formatting for phone inputs.
+
 Well, **Muskey**'s got you covered:
 
 ```dart
