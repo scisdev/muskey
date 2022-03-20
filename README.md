@@ -157,4 +157,4 @@ directly in your [build] method, and place it in [inputFormatters]
 list of your [TextField]. Provide a non-empty list of masks to work with,
 customize if needed.
 
-<img src="readme_media/idk_really.png"/>
+<img src="readme_media/idk_really.png" height="400"/>
