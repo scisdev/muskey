@@ -28,7 +28,7 @@ TextField(
 
 And that's it! Smart cursor positioning and dynamic mask switch make the ux nice and usable:
 
-<img src="readme_gifs/world_masks.gif" height="600"/>
+<img src="readme_media/world_masks.gif" height="600"/>
 
 ---
 
@@ -139,7 +139,7 @@ MuskeyFormatter(
 );
 ```
 
-<img src="readme_gifs/showcase.gif" height="600"/>
+<img src="readme_media/showcase.gif" height="600"/>
 
 ---
 
@@ -156,3 +156,5 @@ Create an instance of this class either inside your StatefulWidget, or
 directly in your [build] method, and place it in [inputFormatters]
 list of your [TextField]. Provide a non-empty list of masks to work with,
 customize if needed.
+
+<img src="readme_media/idk_really.png"/>
