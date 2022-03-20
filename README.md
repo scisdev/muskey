@@ -158,7 +158,7 @@ add a listener on your TextEditingController or any other way.
 ```dart
 ...
 
-muskey = MuskeyFormatter.countryPhoneMasks(
+final muskey = MuskeyFormatter.countryPhoneMasks(
   allowOverflowingInputs: true,
 );
 
