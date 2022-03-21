@@ -1,6 +1,6 @@
 {
-    "name": "muskey_showcase",
-    "short_name": "muskey_showcase",
+    "name": "example",
+    "short_name": "example",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

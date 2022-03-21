@@ -1,4 +1,4 @@
-# muskey_showcase
+# example
 
 A new Flutter project.
 
