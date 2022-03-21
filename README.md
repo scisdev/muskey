@@ -31,7 +31,7 @@ TextField(
 
 And that's it! Smart cursor positioning and dynamic mask switch make the ux nice and usable:
 
-<img src="readme_media/world_masks.gif" height="600"/>
+<img src="https://media2.giphy.com/media/JlMLtp6DqauKaL8DOX/giphy.gif?cid=790b7611a6f27276ec546880a2aeee8a67c5bb834ad8fa01&rid=giphy.gif&ct=g" height="600"/>
 
 ---
 
@@ -142,7 +142,7 @@ MuskeyFormatter(
 );
 ```
 
-<img src="readme_media/showcase.gif" height="600"/>
+<img src="https://media1.giphy.com/media/8FNG0VJdj10iUrrr20/giphy.gif?cid=790b761109753766f268229fd2192ee995a0ab43a500def8&rid=giphy.gif&ct=g" height="600"/>
 
 ---
 
@@ -150,7 +150,7 @@ MuskeyFormatter(
 
 This formatter is *stateless* by design. It does support detecting the validity of your masks,
 but if you want updates on it, you need to create your own ways of doing that. For example, you can get
-current formatter info value inside of onChanged callback in your TextField,
+current formatter info value inside onChanged callback in your TextField,
 add a listener on your TextEditingController or any other way.
 
 ### For example:
@@ -196,7 +196,7 @@ directly in your [build] method, and place it in [inputFormatters]
 list of your [TextField]. Provide a non-empty list of masks to work with,
 customize if needed.
 
-<img src="readme_media/idk_really.png" height="400"/>
+<img src="https://i.ibb.co/5W2kPmC/idk-really.png" height="400"/>
 
 ### Other features? Currency? Regex?
 
