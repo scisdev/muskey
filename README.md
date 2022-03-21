@@ -31,7 +31,7 @@ TextField(
 
 And that's it! Smart cursor positioning and dynamic mask switch make the ux nice and usable:
 
-<img src=".readme_media/world_masks.gif" height="600"/>
+<img src="readme_media/world_masks.gif" height="600"/>
 
 ---
 
@@ -142,7 +142,7 @@ MuskeyFormatter(
 );
 ```
 
-<img src=".readme_media/showcase.gif" height="600"/>
+<img src="readme_media/showcase.gif" height="600"/>
 
 ---
 
@@ -196,7 +196,7 @@ directly in your [build] method, and place it in [inputFormatters]
 list of your [TextField]. Provide a non-empty list of masks to work with,
 customize if needed.
 
-<img src=".readme_media/idk_really.png" height="400"/>
+<img src="readme_media/idk_really.png" height="400"/>
 
 ### Other features? Currency? Regex?
 

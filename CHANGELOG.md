@@ -1,3 +1,6 @@
+## 1.0.2
+* Minor README fix
+
 ## 1.0.1
 * Minor README fix
 * Correctly added example project
