@@ -226,12 +226,7 @@ class MuskeyFormatter extends TextInputFormatter {
       return oldValue;
     }
 
-    int skip = 0;
-    void skipPlusPlus() {
-      skip++;
-    }
-
-    final newText = _buildMask(clean, mask, skipPlusPlus);
+    final newText = _buildMask(clean, mask);
     _info = CurrentMaskInfo(
       clean: clean,
       isValid: clean.length >= _getClean(mask).length,
@@ -243,7 +238,10 @@ class MuskeyFormatter extends TextInputFormatter {
           newValue.text,
           newValue.selection.baseOffset,
           newText,
-          skip: skip,
+          skip: newText.length -
+              _numDecorators(newText) -
+              newValue.text.length +
+              _numDecorators(newValue.text),
         ),
       ),
     );
@@ -341,11 +339,7 @@ class MuskeyFormatter extends TextInputFormatter {
   }
 
   // template is guaranteed to fit
-  String _buildMask(
-    String pattern,
-    String template,
-    void Function() skipPlusPlus,
-  ) {
+  String _buildMask(String pattern, String template) {
     final sb = StringBuffer();
     int pi = 0, ti = 0;
     while (true) {
@@ -374,10 +368,6 @@ class MuskeyFormatter extends TextInputFormatter {
               }
 
               if (!_wildcards.containsKey(template[ti])) {
-                if (!_isDecorator(template[ti])) {
-                  skipPlusPlus();
-                }
-
                 sb.write(template[ti++]);
               } else {
                 break;
