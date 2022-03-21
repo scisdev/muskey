@@ -1,6 +1,6 @@
 name: muskey
 description: An actually useful pattern matcher and field input formatter for Flutter.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/scisdev/muskey
 
 environment:
