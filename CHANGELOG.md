@@ -1,3 +1,7 @@
+## 1.0.1
+* Minor README fix
+* Correctly added example project
+
 ## 1.0.0
 
 ### Initial release:
